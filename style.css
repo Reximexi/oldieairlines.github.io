@@ -34,18 +34,20 @@ h1 {
   align-items: center;
   width: 100%;
   padding: 10px 0;
+  gap: 20px;
 }
 
 .logo-left,
 .logo-right {
-  flex: 0 0 100px;
+  flex: 0 0 auto;
 }
 
 .logo,
 #vatsim {
-  width: 100%;
+  width: 100px;
   height: auto;
   border-radius: 20px;
+  display: block;
 }
 .logo {
   margin-left: 10px;
@@ -198,6 +200,7 @@ p {
     width: 90%;
   }
 }
+
 
 
 
