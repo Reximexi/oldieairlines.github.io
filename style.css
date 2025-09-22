@@ -28,18 +28,19 @@ h1 {
   font-size: 32px;
 }
 
-/* Logók konténere */
 .logo-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   width: 100%;
+  max-width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(0, 255, 0, 0.1); /* ideiglenes vizuális teszt */
 }
 
 .logo,
 #vatsim {
-  max-width: 100px;
+  width: 100px;
   height: auto;
   border-radius: 20px;
 }
@@ -187,5 +188,6 @@ p {
     width: 90%;
   }
 }
+
 
 
