@@ -1,134 +1,189 @@
+/* Alapbeállítások */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url(lond3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(lond3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* Háttér fixálás csak desktopon */
+@media (min-width: 769px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* Cím */
 h1 {
-    text-align: center;
-    color: wheat;
+  text-align: center;
+  color: wheat;
+  margin-top: 20px;
+  font-size: 32px;
 }
 
-.logo {
-    width: 10%;
-    height: 10%;
-    border-radius: 20px;
+/* Logók konténere */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
 }
 
-#flotta{
-   background-color: rgba(0, 0, 0, 0.7);
-    margin: auto;
-    width: 60%;
-    border-radius: 20px;
-    padding: 20px;
-    color: wheat;
-    font-family: Arial, sans-serif; 
-}
-
+.logo,
 #vatsim {
-    width: 20%;
-    height: 20%;
-    border-radius: 20px;
-    float: right;
+  max-width: 100px;
+  height: auto;
+  border-radius: 20px;
 }
 
+/* Egyéb képek */
 img:not(.logo):not(#vatsim) {
   border-radius: 20px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+  margin: 20px auto;
+  max-width: 100%;
   height: auto;
-
 }
 
+/* Gombok */
 button {
-    background-color: wheat;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    
+  background-color: wheat;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: auto;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+/* Linkek */
+a {
+  text-decoration: none;
+  color: black;
 }
 
-span{
-    color: #b42711;
-    font-weight: bold;
+/* Kiemelt szöveg */
+span {
+  color: #b42711;
+  font-weight: bold;
 }
 
+/* Navigációs menü */
 .oldie-navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   padding: 10px 0;
-  gap: 20px;
-  
+  gap: 10px;
+  max-width: 100%;
 }
 
 .oldie-navbar a {
   color: wheat;
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 10px 15px;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .oldie-navbar a:hover {
   background-color: gray;
 }
 
-#csatlakozas {
-    background-color: rgba(0, 0, 0, 0.7);
-    margin: auto;
-    width: 60%;
-    border-radius: 20px;
-    padding: 20px;
-    color: wheat;
-    font-family: Arial, sans-serif;
-}
-#kapcsolatok {
-    background-color: rgba(0, 0, 0, 0.7);
-    margin: auto;
-    width: 60%;
-    border-radius: 20px;
-    padding: 20px;
-    color: wheat;
-    font-family: Arial, sans-serif;
-}
-
+/* Tartalomdobozok */
+#flotta,
+#csatlakozas,
+#kapcsolatok,
 #tartalom {
-    background-color: rgba(0, 0, 0, 0.7);
-    margin: auto;
-    width: 60%;
-    border-radius: 20px;
-    padding: 20px;
-    color: wheat;
-    font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 20px;
+  color: wheat;
 }
 
-li{
-    color: wheat;
-    font-size: 20px;
-    text-align: left;
-    margin-right: 40px;
+/* Szövegek és listák */
+li,
+p {
+  color: wheat;
+  font-size: 20px;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+/* Mobilnézet */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .oldie-navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .oldie-navbar a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 12px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .logo-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo,
+  #vatsim {
+    max-width: 80px;
+    height: auto;
+  }
+
+  #flotta,
+  #csatlakozas,
+  #kapcsolatok,
+  #tartalom {
+    padding: 15px;
+  }
+
+  li,
+  p {
+    font-size: 18px;
     padding: 5px;
-}
+  }
 
-p{
-    color: wheat;
-    font-size: 25px;
-    text-align: left;
-    margin-right: 40px;
+  img:not(.logo):not(#vatsim) {
+    width: 90%;
+  }
 }
