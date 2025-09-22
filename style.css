@@ -166,6 +166,7 @@ p {
     padding: 10px;
   }
 
+ @media (max-width: 768px) {
   .logo,
   #vatsim {
     width: 80px;
@@ -189,6 +190,7 @@ p {
     width: 90%;
   }
 }
+
 
 
 
