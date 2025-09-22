@@ -35,7 +35,6 @@ h1 {
   width: 100%;
   max-width: 100%;
   padding: 10px 20px;
-  background-color: rgba(0, 255, 0, 0.1); /* ideiglenes vizuális teszt */
 }
 
 .logo,
@@ -188,6 +187,7 @@ p {
     width: 90%;
   }
 }
+
 
 
 
