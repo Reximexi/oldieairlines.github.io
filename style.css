@@ -32,19 +32,15 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   width: 100%;
+  max-width: 100%;
   padding: 10px 0;
-}
-
-.logo-container a {
-  flex-basis: 100px;
-  flex-grow: 0;
-  flex-shrink: 0;
 }
 
 .logo,
 #vatsim {
-  width: 100%;
+  width: 100px;
   height: auto;
   border-radius: 20px;
   display: block;
@@ -176,12 +172,6 @@ p {
   }
 }
 
-@media (max-width: 768px) {
-  .logo-container a {
-    flex-basis: 80px;
-  }
-}
-
   #flotta,
   #csatlakozas,
   #kapcsolatok,
@@ -199,6 +189,7 @@ p {
     width: 90%;
   }
 }
+
 
 
 
