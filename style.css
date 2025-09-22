@@ -32,14 +32,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap; /* fontos! ne törjön sorba */
+  gap: 20px;
   width: 100%;
   padding: 10px 0;
-  gap: 20px;
-}
-
-.logo-left,
-.logo-right {
-  flex: 0 0 auto;
 }
 
 .logo,
@@ -47,7 +43,7 @@ h1 {
   width: 100px;
   height: auto;
   border-radius: 20px;
-  display: block;
+  flex-shrink: 0; /* ne zsugorodjon */
 }
 
 /* Egyéb képek */
@@ -193,6 +189,7 @@ p {
     width: 90%;
   }
 }
+
 
 
 
