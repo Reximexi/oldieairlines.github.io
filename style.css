@@ -32,7 +32,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap; /* fontos! ne törjön sorba */
+  flex-wrap: nowrap;
   gap: 20px;
   width: 100%;
   padding: 10px 0;
@@ -43,7 +43,8 @@ h1 {
   width: 100px;
   height: auto;
   border-radius: 20px;
-  flex-shrink: 0; /* ne zsugorodjon */
+  flex-shrink: 0;
+  display: block;
 }
 
 /* Egyéb képek */
@@ -159,14 +160,13 @@ p {
     font-size: 16px;
   }
 
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
   .logo-container {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
   }
 
- @media (max-width: 768px) {
   .logo,
   #vatsim {
     width: 80px;
@@ -190,6 +190,7 @@ p {
     width: 90%;
   }
 }
+
 
 
 
