@@ -28,22 +28,20 @@ h1 {
   font-size: 32px;
 }
 
+/* Logók konténere */
 .logo-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+  padding: 10px 20px;
   width: 100%;
-  max-width: 100%;
-  padding: 10px 0;
 }
 
 .logo,
 #vatsim {
-  width: 100px;
+  max-width: 100px;
   height: auto;
   border-radius: 20px;
-  display: block;
 }
 
 /* Egyéb képek */
@@ -113,7 +111,7 @@ span {
 #tartalom {
   background-color: rgba(0, 0, 0, 0.7);
   width: 90%;
-  max-width: 1200px;
+  max-width: 600px;
   margin: 20px auto;
   border-radius: 20px;
   padding: 20px;
@@ -159,18 +157,18 @@ p {
     font-size: 16px;
   }
 
- @media (max-width: 768px) {
   .logo-container {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
   }
 
   .logo,
   #vatsim {
-    width: 80px;
+    max-width: 80px;
+    height: auto;
   }
-}
 
   #flotta,
   #csatlakozas,
@@ -189,7 +187,6 @@ p {
     width: 90%;
   }
 }
-
 
 
 
